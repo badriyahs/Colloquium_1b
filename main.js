@@ -381,3 +381,71 @@ window.onload = function () {
         }
     });
 }
+
+// Sin waves
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Settings for each sine wave: amplitude and speed
+    const sineWaves = [
+        { canvasId: "canvas1", amplitude: 20, speed: 4 },
+        { canvasId: "canvas2", amplitude: 30, speed: 3 },
+        { canvasId: "canvas3", amplitude: 40, speed: 5 },
+        { canvasId: "canvas4", amplitude: 50, speed: 2 },
+        { canvasId: "canvas5", amplitude: 60, speed: 6 },
+        { canvasId: "canvas6", amplitude: 70, speed: 3 },
+        { canvasId: "canvas7", amplitude: 80, speed: 4 },
+        { canvasId: "canvas8", amplitude: 90, speed: 2 }
+    ];
+
+    // Function to draw sine waves on each canvas
+    sineWaves.forEach(function (sineWave) {
+        let step = 0;
+
+        function draw() {
+            var canvas = document.getElementById(sineWave.canvasId);
+            var context = canvas.getContext("2d");
+
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            showAxes(context);
+            context.save();
+
+            plotSine(context, step, sineWave.amplitude); // Use custom amplitude
+            context.restore();
+
+            step += sineWave.speed; // Use custom speed
+            window.requestAnimationFrame(draw);
+        }
+
+        function showAxes(context) {
+            var width = context.canvas.width;
+            var height = context.canvas.height;
+            context.beginPath();
+            context.moveTo(0, height / 2);
+            context.lineTo(width, height / 2);
+            context.strokeStyle = "#ffffff";
+            context.lineWidth = 1;
+            context.stroke();
+        }
+
+        function plotSine(context, step, amplitude) {
+            var width = context.canvas.width;
+            var height = context.canvas.height;
+            var x = 4;
+            var y = 0;
+
+            context.beginPath();
+            context.lineWidth = 2;
+            context.strokeStyle = "#ffffff";
+
+            while (x < width) {
+                y = height / 2 + amplitude * Math.sin((x + step) / 20);
+                context.lineTo(x, y);
+                x += 1;
+            }
+            context.stroke();
+        }
+
+        // Start the animation for this sine wave
+        draw();
+    });
+});
