@@ -29,24 +29,24 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('resize', scroller.resize);    // Flipthrough images functionality
     let currentImageIndex = 0;
     const images = [
-        "Devices/DevicesAll1.png",
-        "Devices/DevicesAll2.png",
-        "Devices/DevicesAll3.png",
-        "Devices/DevicesAll4.png",
-        "Devices/DevicesAll5.png",
-        "Devices/DevicesAll6.png",
-        "Devices/DevicesAll7.png",
-        "Devices/DevicesAll8.png",
-        "Devices/DevicesAll9.png",
-        "Devices/DevicesAllTogether.png"
+        "Assets/Devices/DevicesAll1.png",
+        "Assets/Devices/DevicesAll2.png",
+        "Assets/Devices/DevicesAll3.png",
+        "Assets/Devices/DevicesAll4.png",
+        "Assets/Devices/DevicesAll5.png",
+        "Assets/Devices/DevicesAll6.png",
+        "Assets/Devices/DevicesAll7.png",
+        "Assets/Devices/DevicesAll8.png",
+        "Assets/Devices/DevicesAll9.png",
+        "Assets/Devices/DevicesAllTogether.png"
     ];
     const customImages = [
-        "Devices/DevicesThroughTime/20.png",
-        "Devices/DevicesThroughTime/21.png",  // Forces
-        "Devices/DevicesThroughTime/22.png",  // Control
-        "Devices/DevicesThroughTime/23.png",  // Sync
-        "Devices/DevicesThroughTime/24.png",  // Constant
-        "Devices/DevicesThroughTime/25.png"   // Inaccessible
+        "Assets/Devices/DevicesThroughTime/20.png",
+        "Assets/Devices/DevicesThroughTime/21.png",  // Forces
+        "Assets/Devices/DevicesThroughTime/22.png",  // Control
+        "Assets/Devices/DevicesThroughTime/23.png",  // Sync
+        "Assets/Devices/DevicesThroughTime/24.png",  // Constant
+        "Assets/Devices/DevicesThroughTime/25.png"   // Inaccessible
     ];
 
     function updateImage() {
@@ -131,8 +131,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const globe = Globe()
         .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
-        .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png') // Starry sky background
-        .atmosphereColor('#FFFFFF') // Change glow to white
+        .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png').atmosphereColor('#FFFFFF') // Change glow to white
         .atmosphereAltitude(0.15) // Adjust glow intensity
         .arcColor('color')
         .arcDashLength(() => 0.3)
