@@ -131,7 +131,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const globe = Globe()
         .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
-        .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png').atmosphereColor('#FFFFFF') // Change glow to white
+        .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png') // Starry sky background
+        .atmosphereColor('#FFFFFF') // Change glow to white
         .atmosphereAltitude(0.15) // Adjust glow intensity
         .arcColor('color')
         .arcDashLength(() => 0.3)
