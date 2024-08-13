@@ -383,9 +383,9 @@ window.onload = function () {
 }
 
 // Sin waves
-
 document.addEventListener("DOMContentLoaded", function () {
-    // Settings for each sine wave: amplitude and speed
+    console.log("Sine wave script is running"); // Debug log
+
     const sineWaves = [
         { canvasId: "canvas1", amplitude: 20, speed: 4 },
         { canvasId: "canvas2", amplitude: 30, speed: 3 },
@@ -397,22 +397,27 @@ document.addEventListener("DOMContentLoaded", function () {
         { canvasId: "canvas8", amplitude: 90, speed: 2 }
     ];
 
-    // Function to draw sine waves on each canvas
     sineWaves.forEach(function (sineWave) {
+        console.log(`Rendering sine wave on ${sineWave.canvasId}`); // Debug log
+
         let step = 0;
 
         function draw() {
             var canvas = document.getElementById(sineWave.canvasId);
+            if (!canvas) {
+                console.log(`Canvas ${sineWave.canvasId} not found`); // Debug log
+                return;
+            }
             var context = canvas.getContext("2d");
 
             context.clearRect(0, 0, canvas.width, canvas.height);
             showAxes(context);
             context.save();
 
-            plotSine(context, step, sineWave.amplitude); // Use custom amplitude
+            plotSine(context, step, sineWave.amplitude);
             context.restore();
 
-            step += sineWave.speed; // Use custom speed
+            step += sineWave.speed;
             window.requestAnimationFrame(draw);
         }
 
@@ -445,7 +450,6 @@ document.addEventListener("DOMContentLoaded", function () {
             context.stroke();
         }
 
-        // Start the animation for this sine wave
         draw();
     });
 });

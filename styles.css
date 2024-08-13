@@ -484,8 +484,8 @@ h1 {
 }
 
 #network {
-    width: 100%;
-    height: 100%;
+    width: 150%;
+    height: 150%;
     display: block;
     margin: 0 auto;
     background-color: transparent;
@@ -595,9 +595,18 @@ html {
     grid-template-columns: repeat(2, 1fr);
     /* 2 columns */
     grid-gap: 20px;
+    /* Adjust the gap between items */
     background-color: #000000;
     /* Black background */
     padding: 20px;
+    /* Padding around the container */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Full viewport height */
+    width: 100%;
+    /* Full width */
+    box-sizing: border-box;
 }
 
 .sine-wave-item {
@@ -608,11 +617,27 @@ html {
     /* Black background for each sine wave */
     border-radius: 10px;
     padding: 10px;
+    width: 200px;
+    /* Adjusted width */
+    height: 100px;
+    /* Adjusted height */
+    position: relative;
+    box-sizing: border-box;
+}
+
+.sine-wave-item canvas {
+    width: 100%;
+    height: auto;
+    transform: scale(0.8);
+    /* Slight zoom out */
+    transform-origin: center;
 }
 
 canvas {
     background-color: transparent;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 100%;
-    height: auto;
+    height: 100%;
+    position: relative;
+    z-index: 2;
 }
