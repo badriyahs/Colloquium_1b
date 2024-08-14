@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Alert to confirm JS is working
-    alert("JavaScript is linked and working!");
+    alert("Temporal Awareness Research by Badriyah Alsalem.");
 
     // Initialize scrollama
     const scroller = scrollama();
