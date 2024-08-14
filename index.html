@@ -238,9 +238,10 @@
                     <source src="Assets/KADA.mp4" type="video/mp4">
                 </video>
             </section>
-            <section class="step" data-step="25" data-title="So what is 'Open source' time?">
-                <div id="myContainer" class="hole centered-content"></div>
-            </section>
+
+
+
+
 
             <!-- CYCLES ALL TOGETHER GIF -->
             <section class="step" data-step="28">
@@ -251,7 +252,8 @@
 
             <section class="step" data-step="4" data-title="Placeholder 1">
                 <div class="placeholder-container">
-                    <p class="placeholder-text">Here, I apply it to myself. The Hagerstand diagram of how I move through
+                    <p class="placeholder-text">Here, I apply it to myself. The Hagerstand diagram of how I move
+                        through
                         space.</p>
                 </div>
             </section>
@@ -273,8 +275,21 @@
                     <p class="placeholder-text">I'm pushing it.... but, credits for fun?</p>
                 </div>
             </section>
+
+            <section class="step" data-step="25" data-title="So what is 'Open source' time?">
+                <div id="myContainer" class="hole centered-content"></div>
+            </section>
         </div>
     </div>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+    <script type="module">
+        import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+        import define from "https://api.observablehq.com/@visnup/re-we-need-more-tiny-knowledge-projects-heres-one.js?v=4";
+        new Runtime().module(define, name => {
+            if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-9afe758a"));
+        });
+    </script>
 
 </body>
 
