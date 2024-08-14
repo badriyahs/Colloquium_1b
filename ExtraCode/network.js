@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const color = d3.scaleOrdinal(d3.schemeAccent);
 
     const graph = {
-        nodes: [/* Nodes data here */],
-        links: [/* Links data here */]
+        nodes: [/* Replace with your nodes data */],
+        links: [/* Replace with your links data */]
     };
 
     const simulation = d3.forceSimulation()
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function update() {
         ctx.clearRect(0, 0, width, height);
-x
+
         ctx.beginPath();
         ctx.globalAlpha = 0.5;
         ctx.strokeStyle = 'white';
