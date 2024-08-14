@@ -202,11 +202,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const color = d3.scaleOrdinal(d3.schemeAccent);
 
     const simulation = d3.forceSimulation()
-        .force('x', d3.forceX(width / 2))
-        .force('y', d3.forceY(height / 2))
-        .force('collide', d3.forceCollide(r + 20))
-        .force('charge', d3.forceManyBody().strength(-100))
-        .force('link', d3.forceLink().id(node => node.name))
+        .force('x', d3.forceX(width / 2).strength(0.5)) // Adjust strength to better center nodes
+        .force('y', d3.forceY(height / 2).strength(0.5))
+        .force('collide', d3.forceCollide(r + 40)) // Increase the collision radius for more spacing
+        .force('charge', d3.forceManyBody().strength(-150)) // Adjust the strength to zoom out the network
+        .force('link', d3.forceLink().id(node => node.name).distance(200)) // Increase the distance between linked nodes
         .on('tick', update);
 
     simulation.nodes(graph.nodes);

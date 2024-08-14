@@ -37,10 +37,12 @@
 
         .container {
             display: flex;
-            height: 100vh;
+            justify-content: center;
+            align-items: center;
             width: 100%;
-            overflow-x: hidden;
-            position: relative;
+            height: 100vh;
+            margin: 0 auto;
+            box-sizing: border-box;
         }
 
         .sidebar {
@@ -134,7 +136,7 @@
             <!-- Time-Telling Devices Evolution -->
             <section class="step" data-step="6" data-title="Time telling devices shaped human perception.">
                 <div class="image-flip-container">
-                    <h1 id="message">Time-Telling Devices</h1>
+
                     <img id="myImage" class="image-flip" src="Assets/Devices/DevicesAll1.png" alt="Time-Telling Device">
 
                     <div class="image-flip-buttons">
@@ -231,7 +233,7 @@
                 <canvas id="network" width="1200" height="800"></canvas>
             </section>
 
-            <section class="step video-container" data-step="10" data-title="Your Video Title">
+            <section class="step video-container" data-step="10" data-title="How far will it go?">
                 <video autoplay loop muted playsinline>
                     <source src="Assets/KADA.mp4" type="video/mp4">
                 </video>
@@ -240,23 +242,12 @@
                 <div id="myContainer" class="hole centered-content"></div>
             </section>
 
-            <!-- Creating 8 canvases for 8 sine waves -->
-            <section class="step sine-wave-container centered-content" data-step="11" data-title="Sine Wave Animations">
-                <div class="sine-wave-item"><canvas id="canvas1" width="200" height="100"></canvas></div>
-                <div class="sine-wave-item"><canvas id="canvas2" width="200" height="100"></canvas></div>
-                <div class="sine-wave-item"><canvas id="canvas3" width="200" height="100"></canvas></div>
-                <div class="sine-wave-item"><canvas id="canvas4" width="200" height="100"></canvas></div>
-                <div class="sine-wave-item"><canvas id="canvas5" width="200" height="100"></canvas></div>
-                <div class="sine-wave-item"><canvas id="canvas6" width="200" height="100"></canvas></div>
-                <div class="sine-wave-item"><canvas id="canvas7" width="200" height="100"></canvas></div>
-                <div class="sine-wave-item"><canvas id="canvas8" width="200" height="100"></canvas></div>
+            <!-- CYCLES ALL TOGETHER GIF -->
+            <section class="step" data-step="28">
+                <div class="gif-container">
+                    <img id="moving-gif" src="Assets/CyclesAll.mp4" alt="Moving GIF">
+                </div>
             </section>
-
-
-
-
-
-
 
             <section class="step" data-step="4" data-title="Placeholder 1">
                 <div class="placeholder-container">

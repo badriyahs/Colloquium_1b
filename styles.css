@@ -1,3 +1,10 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* General Body and HTML Styles */
 body,
 html {
@@ -24,9 +31,18 @@ html {
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 100vh;
     margin: 0 auto;
+    /* Centers the container horizontally */
     padding: 20px;
+    /* You can adjust or remove this if necessary */
     box-sizing: border-box;
+    /* Ensures padding does not affect the width/height */
+}
+
+/* Ensure all elements inside the container inherit the same box-sizing */
+.container * {
+    box-sizing: inherit;
 }
 
 /* Sticky Title Section */
@@ -64,14 +80,16 @@ html {
     display: flex;
     height: 100%;
     width: calc(100% - 200px);
-    /* Adjust for sticky title */
+    /* Adjust for sidebar width */
     overflow-x: auto;
     scroll-snap-type: x mandatory;
 }
 
 .step {
     min-width: 100vw;
+    /* Full width */
     height: 100vh;
+    /* Full height */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -484,8 +502,12 @@ h1 {
 }
 
 #network {
-    width: 150%;
-    height: 150%;
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+    /* Set a max-width to prevent it from being too large */
+    max-height: 800px;
+    /* Set a max-height to maintain the aspect ratio */
     display: block;
     margin: 0 auto;
     background-color: transparent;
@@ -546,11 +568,14 @@ html {
 #myContainer.hole {
     background-image: url(./Assets/Body/In.png);
     background-size: cover;
-    --x: 200px;
-    --y: 150px;
     width: 100%;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 #myContainer.hole::after {
@@ -563,10 +588,9 @@ html {
     background-image: url(./Assets/Body/Out.png);
     background-size: cover;
     z-index: 1;
-    -webkit-mask-repeat: no-repeat no-repeat;
     mask-repeat: no-repeat no-repeat;
-    -webkit-mask-image: radial-gradient(200px at var(--x) var(--y), transparent 95%, black 100%);
     mask-image: radial-gradient(200px at var(--x) var(--y), transparent 95%, black 100%);
+    box-sizing: border-box;
 }
 
 .placeholder-container {
